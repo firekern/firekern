@@ -11,10 +11,6 @@
   <img src="https://komarev.com/ghpvc/?username=firekern&style=for-the-badge&color=E5397F&label=VIEWS" alt="profile views">
 </p>
 
-<p align="center">
-  <img src="https://streak-stats.demolab.com/?user=firekern&hide_border=true&background=00000000&stroke=E5397F&ring=E5397F&fire=E5397F&currStreakLabel=E5397F&sideNums=888888&sideLabels=888888&dates=888888&currStreakNum=E5397F" alt="streak">
-</p>
-
 ---
 
 <h3 align="center">Contests &amp; challenges</h3>
