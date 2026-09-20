@@ -1,9 +1,6 @@
 <h1 align="center">Andrea Porcelli</h1>
 
-<p align="center">
-  Research assistant at the University of Foggia. I work on cybersecurity and<br>
-  large language models, and a bit of everything else.
-</p>
+<p align="center"><img src="assets/terminal.svg" alt="A terminal that types: whoami, research assistant at the University of Foggia; cat interests.txt, cybersecurity, large language models, a bit of everything else" width="100%"></p>
 
 <p align="center">
   <img src="https://img.shields.io/badge/Foggia-Italy-d42a3c?style=for-the-badge&labelColor=111111" alt="Foggia, Italy">
@@ -36,9 +33,6 @@
   <a href="https://github.com/firekern/zagreus-italic-challenge-xmoons">
     <img src="https://img.shields.io/badge/mii--llm_Post--Training_Challenge-ITALIC_28.88_→_39.88-d42a3c?style=for-the-badge&labelColor=111111" alt="ITALIC challenge">
   </a>
-  <a href="https://github.com/firekern/codeforces">
-    <img src="https://img.shields.io/badge/Codeforces-grind-d42a3c?style=for-the-badge&logo=codeforces&logoColor=fff&labelColor=111111" alt="Codeforces">
-  </a>
 </p>
 
 ---
@@ -46,16 +40,14 @@
 <h3 align="center">Repositories</h3>
 
 <!-- projects:start -->
-<table align="center" width="100%">
-<tr>
-	<td width="50%" align="center"><a href="https://github.com/firekern/zusia"><img src="assets/card-zusia.svg?d=20260920" alt="zusia: A study buddy inside Zotero. Ask Claude Code, Codex or Antigravity about the paper on screen; get LaTeX, drawings and proofs back." width="100%"></a></td>
-	<td width="50%" align="center"><a href="https://github.com/firekern/zagreus-italic-challenge-xmoons"><img src="assets/card-zagreus-italic-challenge-xmoons.svg?d=20260920" alt="zagreus-italic-challenge: Post-training of zagreus-0.4B-ita for the mii-llm challenge. ITALIC 28.88 to 39.88, reproducible end to end." width="100%"></a></td>
-</tr>
-<tr>
-	<td width="50%" align="center"><a href="https://github.com/firekern/parkinson-handwriting-dl"><img src="assets/card-parkinson-handwriting-dl.svg?d=20260920" alt="parkinson-handwriting-dl: Parkinson's detection from PaHaW handwriting. Time-frequency analysis with a structure-preserving colour encoding." width="100%"></a></td>
-	<td width="50%" align="center"><a href="https://github.com/firekern/codeforces"><img src="assets/card-codeforces.svg?d=20260920" alt="codeforces: Competitive programming, problem by problem. Solutions kept as written during the contest, not cleaned up after." width="100%"></a></td>
-</tr>
-</table>
+<p align="center">
+	<a href="https://github.com/firekern/zusia"><img src="assets/card-zusia.svg?d=20260920" alt="zusia: A study buddy inside Zotero. Ask Claude Code, Codex or Antigravity about the paper on screen; get LaTeX, drawings and proofs back." width="49%"></a>
+	<a href="https://github.com/firekern/zagreus-italic-challenge-xmoons"><img src="assets/card-zagreus-italic-challenge-xmoons.svg?d=20260920" alt="zagreus-italic-challenge: Post-training of zagreus-0.4B-ita for the mii-llm challenge. ITALIC 28.88 to 39.88, reproducible end to end." width="49%"></a>
+</p>
+<p align="center">
+	<a href="https://github.com/firekern/parkinson-handwriting-dl"><img src="assets/card-parkinson-handwriting-dl.svg?d=20260920" alt="parkinson-handwriting-dl: Parkinson's detection from PaHaW handwriting. Time-frequency analysis with a structure-preserving colour encoding." width="49%"></a>
+	<a href="https://github.com/firekern/codeforces"><img src="assets/card-codeforces.svg?d=20260920" alt="codeforces: Competitive programming, problem by problem. Solutions kept as written during the contest, not cleaned up after." width="49%"></a>
+</p>
 <!-- projects:end -->
 
 <p align="center">

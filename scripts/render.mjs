@@ -69,6 +69,68 @@ function card(project, repo) {
 `;
 }
 
+// ------------------------------------------------------------ terminal card
+
+// The lines the terminal types, in order. A `prompt` line is shown after a red
+// $; anything else is output. An empty string is a blank line.
+const SESSION = [
+	{ prompt: "whoami" },
+	{ out: "research assistant, University of Foggia" },
+	{ out: "" },
+	{ prompt: "cat interests.txt" },
+	{ out: "cybersecurity" },
+	{ out: "large language models" },
+	{ out: "a bit of everything else" },
+];
+
+function terminalCard() {
+	const width = 760;
+	const bar = 42;
+	const lineHeight = 24;
+	const padX = 26;
+	const height = bar + 22 + SESSION.length * lineHeight + 34;
+	const cycle = SESSION.length * 1.6 + 5;
+	const inner = width - padX * 2;
+
+	// Each line gets its own slice of one shared cycle. The animation runs on the
+	// mask rect's width: CSS, not SMIL, because SMIL's repeatCount does not
+	// advance once the SVG is embedded with <img>, which is how a README shows it.
+	const slice = 0.76 / SESSION.length;
+	const keyframes = [];
+	const body = SESSION.map((line, i) => {
+		if (!line.prompt && line.out === "") return "";
+		const y = bar + 40 + i * lineHeight;
+		const from = Math.max(0.2, i * slice * 100);
+		const to = from + slice * 88;
+		keyframes.push(`@keyframes type${i}{0%,${from.toFixed(2)}%{width:0}${to.toFixed(2)}%,96%{width:${inner}px}100%{width:0}}`);
+		const text = line.prompt
+			? `<tspan fill="${RED}">$</tspan> <tspan fill="#e6e6ea">${escape(line.prompt)}</tspan>`
+			: `<tspan fill="#9a9aa4">${escape(line.out)}</tspan>`;
+		return `
+	<mask id="line${i}"><rect class="t t${i}" x="${padX}" y="${y - 16}" width="0" height="${lineHeight}" fill="#fff"/></mask>
+	<text x="${padX}" y="${y}" mask="url(#line${i})" font-size="15" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">${text}</text>`;
+	}).join("");
+
+	const cursorY = bar + 40 + SESSION.length * lineHeight;
+	return `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}" viewBox="0 0 ${width} ${height}" role="img" aria-label="A terminal that types: whoami, research assistant at the University of Foggia; cat interests.txt, cybersecurity, large language models, a bit of everything else">
+	<style>
+		.t{animation-duration:${cycle.toFixed(2)}s;animation-timing-function:steps(28,end);animation-iteration-count:infinite}
+		${SESSION.map((l, i) => (!l.prompt && l.out === "") ? "" : `.t${i}{animation-name:type${i}}`).join("")}
+		${keyframes.join("")}
+		.cursor{animation:blink 1.1s steps(1,end) infinite}
+		@keyframes blink{0%,49%{opacity:1}50%,99%{opacity:0}100%{opacity:1}}
+	</style>
+	<rect x="1" y="1" width="${width - 2}" height="${height - 2}" rx="14" fill="#111111" stroke="${RED}" stroke-opacity="0.35"/>
+	<path d="M1 15a14 14 0 0 1 14-14h${width - 30}a14 14 0 0 1 14 14v${bar - 15}H1z" fill="${RED}" fill-opacity="0.1"/>
+	<circle cx="26" cy="${bar / 2}" r="5" fill="${RED}"/>
+	<circle cx="46" cy="${bar / 2}" r="5" fill="${RED}" fill-opacity="0.55"/>
+	<circle cx="66" cy="${bar / 2}" r="5" fill="${RED}" fill-opacity="0.28"/>
+	<text x="${width / 2}" y="${bar / 2 + 5}" text-anchor="middle" fill="#7a7a86" font-size="13" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">andrea@foggia</text>${body}
+	<text x="${padX}" y="${cursorY}" font-size="15" font-family="ui-monospace, SFMono-Regular, Menlo, monospace"><tspan fill="${RED}">$</tspan> <tspan class="cursor" fill="#e6e6ea">_</tspan></text>
+</svg>
+`;
+}
+
 function replaceBlock(text, name, body) {
 	const start = `<!-- ${name}:start -->`;
 	const end = `<!-- ${name}:end -->`;
@@ -85,15 +147,17 @@ for (const project of projects) {
 	const repo = await repoInfo(project.repo);
 	const file = `assets/card-${project.repo}.svg`;
 	write(file, card(project, repo));
-	cells.push(`<td width="50%" align="center"><a href="${repo.html_url}"><img src="${file}?d=${stamp}" alt="${escape(project.title)}: ${escape(project.blurb)}" width="100%"></a></td>`);
+	cells.push(`<a href="${repo.html_url}"><img src="${file}?d=${stamp}" alt="${escape(project.title)}: ${escape(project.blurb)}" width="49%"></a>`);
 }
 
+// Two per paragraph, so they sit two to a row without a table around them.
 const rows = [];
 for (let i = 0; i < cells.length; i += 2) {
-	rows.push("<tr>\n\t" + cells.slice(i, i + 2).join("\n\t") + "\n</tr>");
+	rows.push('<p align="center">\n\t' + cells.slice(i, i + 2).join("\n\t") + "\n</p>");
 }
-const table = '<table align="center" width="100%">\n' + rows.join("\n") + "\n</table>";
+const table = rows.join("\n");
 
 let readme = readFileSync(new URL("../README.md", import.meta.url), "utf8");
 write("README.md", replaceBlock(readme, "projects", table));
-console.log(`rendered ${projects.length} project cards`);
+write("assets/terminal.svg", terminalCard());
+console.log(`rendered ${projects.length} project cards and the terminal`);
