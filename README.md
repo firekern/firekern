@@ -1,6 +1,9 @@
 <h1 align="center">Andrea Porcelli</h1>
 
-<p align="center"><img src="assets/terminal.svg" alt="A terminal that types: whoami, research assistant at the University of Foggia; cat interests.txt, cybersecurity, large language models, a bit of everything else" width="100%"></p>
+<p align="center">
+  Research assistant at the University of Foggia. I work on cybersecurity and<br>
+  large language models, and a bit of everything else.
+</p>
 
 <p align="center">
   <img src="https://img.shields.io/badge/Foggia-Italy-d42a3c?style=for-the-badge&labelColor=111111" alt="Foggia, Italy">
