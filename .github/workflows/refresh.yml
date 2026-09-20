@@ -1,0 +1,48 @@
+name: Refresh profile
+
+# The theorem changes with the date and the walk follows the contribution graph,
+# so both go stale on their own. Nothing here touches the hand-written prose.
+on:
+  schedule:
+    - cron: "17 5 * * *"
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - projects.json
+      - theorems.json
+      - scripts/render.mjs
+      - .github/workflows/refresh.yml
+
+permissions:
+  contents: write
+
+concurrency:
+  group: refresh
+  cancel-in-progress: true
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Redraw the table, the theorem and the walk
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: node scripts/render.mjs
+
+      - name: Commit only if something actually changed
+        run: |
+          git config user.name "firekern"
+          git config user.email "cronanacron@gmail.com"
+          git add README.md assets
+          if git diff --cached --quiet; then
+            echo "nothing changed"
+            exit 0
+          fi
+          git commit -m "feat(assets): refresh the theorem, the walk and the project table"
+          git push

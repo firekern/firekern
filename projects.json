@@ -1,0 +1,51 @@
+{
+	"_comment": "The curated project list. Edit this, not the README: scripts/render.mjs rebuilds the table between the projects markers. Order here is the order shown.",
+	"projects": [
+		{
+			"repo": "zusia",
+			"title": "zusia",
+			"blurb": "A study buddy that lives inside Zotero. Ask Claude Code, Codex or Antigravity about the paper on screen; answers come back as LaTeX, drawings and linked theorem boxes.",
+			"badges": ["JavaScript", "Zotero", "LaTeX"]
+		},
+		{
+			"repo": "parkinson-handwriting-dl",
+			"title": "parkinson-handwriting-dl",
+			"blurb": "Parkinson's detection from PaHaW handwriting. Time-frequency analysis with a structure-preserving colour encoding, repeated nested CV.",
+			"badges": ["PyTorch", "LaTeX"]
+		},
+		{
+			"repo": "zagreus-italic-challenge-xmoons",
+			"title": "zagreus-italic-challenge",
+			"blurb": "Post-training of zagreus-0.4B-ita for the mii-llm challenge. ITALIC 28.88 to 39.88, reproducible end to end.",
+			"badges": ["LLM", "Python"]
+		},
+		{
+			"repo": "ProcessMiningDashboard",
+			"title": "ProcessMiningDashboard",
+			"blurb": "Process-mining dashboard for hospital billing analysis.",
+			"badges": ["Python", "stars"]
+		},
+		{
+			"repo": "ICON_2024",
+			"title": "ICON_2024",
+			"blurb": "Knowledge representation and reasoning in Prolog.",
+			"badges": ["Prolog", "stars"]
+		},
+		{
+			"repo": "DB_2025",
+			"title": "DB_2025",
+			"blurb": "An academic conference management system, schema to queries.",
+			"badges": ["SQL", "stars"]
+		}
+	],
+	"badgeColors": {
+		"JavaScript": "F7DF1E:000:javascript",
+		"Zotero": "CC2936:fff:zotero",
+		"LaTeX": "008080:fff:latex",
+		"PyTorch": "EE4C2C:fff:pytorch",
+		"Python": "3776AB:fff:python",
+		"Prolog": "5C3C6A:fff:",
+		"LLM": "DE5FE9:fff:",
+		"SQL": "4479A1:fff:mysql"
+	}
+}
