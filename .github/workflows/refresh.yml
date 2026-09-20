@@ -4,7 +4,7 @@ name: Refresh profile
 # so both go stale on their own. Nothing here touches the hand-written prose.
 on:
   schedule:
-    - cron: "17 5 * * *"
+    - cron: "17 5 * * 1"
   workflow_dispatch:
   push:
     branches: [main]

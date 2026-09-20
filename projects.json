@@ -4,38 +4,57 @@
 		{
 			"repo": "zusia",
 			"title": "zusia",
-			"blurb": "A study buddy that lives inside Zotero. Ask Claude Code, Codex or Antigravity about the paper on screen; answers come back as LaTeX, drawings and linked theorem boxes.",
-			"badges": ["JavaScript", "Zotero", "LaTeX"]
+			"blurb": "A study buddy inside Zotero. Ask Claude Code, Codex or Antigravity about the paper on screen; get LaTeX, drawings and proofs back.",
+			"badges": [
+				"JavaScript",
+				"Zotero",
+				"LaTeX"
+			]
 		},
 		{
 			"repo": "parkinson-handwriting-dl",
 			"title": "parkinson-handwriting-dl",
 			"blurb": "Parkinson's detection from PaHaW handwriting. Time-frequency analysis with a structure-preserving colour encoding, repeated nested CV.",
-			"badges": ["PyTorch", "LaTeX"]
+			"badges": [
+				"PyTorch",
+				"LaTeX"
+			]
 		},
 		{
 			"repo": "zagreus-italic-challenge-xmoons",
 			"title": "zagreus-italic-challenge",
 			"blurb": "Post-training of zagreus-0.4B-ita for the mii-llm challenge. ITALIC 28.88 to 39.88, reproducible end to end.",
-			"badges": ["LLM", "Python"]
+			"badges": [
+				"LLM",
+				"Python"
+			]
 		},
 		{
 			"repo": "ProcessMiningDashboard",
 			"title": "ProcessMiningDashboard",
 			"blurb": "Process-mining dashboard for hospital billing analysis.",
-			"badges": ["Python", "stars"]
+			"badges": [
+				"Python",
+				"stars"
+			]
 		},
 		{
 			"repo": "ICON_2024",
 			"title": "ICON_2024",
 			"blurb": "Knowledge representation and reasoning in Prolog.",
-			"badges": ["Prolog", "stars"]
+			"badges": [
+				"Prolog",
+				"stars"
+			]
 		},
 		{
 			"repo": "DB_2025",
 			"title": "DB_2025",
 			"blurb": "An academic conference management system, schema to queries.",
-			"badges": ["SQL", "stars"]
+			"badges": [
+				"SQL",
+				"stars"
+			]
 		}
 	],
 	"badgeColors": {
