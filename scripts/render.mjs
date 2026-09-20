@@ -41,7 +41,7 @@ function wrap(text, width) {
 	return lines;
 }
 
-const PINK = "#E5397F";
+const RED = "#d42a3c";
 const CARD_W = 460;
 const CARD_H = 168;
 
@@ -60,9 +60,9 @@ function card(project, repo) {
 		.join("   ·   ");
 
 	return `<svg xmlns="http://www.w3.org/2000/svg" width="${CARD_W}" height="${CARD_H}" viewBox="0 0 ${CARD_W} ${CARD_H}" role="img" aria-label="${escape(project.title + ". " + project.blurb)}">
-	<rect x="1" y="1" width="${CARD_W - 2}" height="${CARD_H - 2}" rx="20" fill="#1c1c22" stroke="${PINK}" stroke-opacity="0.3"/>
-	<circle cx="34" cy="40" r="6" fill="${PINK}"/>
-	<text x="52" y="46" fill="${PINK}" font-size="18" font-weight="600" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">${escape(project.title)}</text>
+	<rect x="1" y="1" width="${CARD_W - 2}" height="${CARD_H - 2}" rx="20" fill="#111111" stroke="${RED}" stroke-opacity="0.3"/>
+	<circle cx="34" cy="40" r="6" fill="${RED}"/>
+	<text x="52" y="46" fill="${RED}" font-size="18" font-weight="600" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">${escape(project.title)}</text>
 	${body}
 	<text x="26" y="${CARD_H - 22}" fill="#6f6f7c" font-size="12.5" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">${escape(facts)}</text>
 </svg>

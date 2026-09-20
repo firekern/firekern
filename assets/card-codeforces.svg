@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="460" height="168" viewBox="0 0 460 168" role="img" aria-label="codeforces. Competitive programming, problem by problem. Solutions kept as written during the contest, not cleaned up after.">
+	<rect x="1" y="1" width="458" height="166" rx="20" fill="#111111" stroke="#d42a3c" stroke-opacity="0.3"/>
+	<circle cx="34" cy="40" r="6" fill="#d42a3c"/>
+	<text x="52" y="46" fill="#d42a3c" font-size="18" font-weight="600" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">codeforces</text>
+	<text x="26" y="82" fill="#a8a8b4" font-size="13.5" font-family="ui-sans-serif, -apple-system, Segoe UI, Roboto, sans-serif">Competitive programming, problem by problem.</text>
+	<text x="26" y="102" fill="#a8a8b4" font-size="13.5" font-family="ui-sans-serif, -apple-system, Segoe UI, Roboto, sans-serif">Solutions kept as written during the contest, not</text>
+	<text x="26" y="122" fill="#a8a8b4" font-size="13.5" font-family="ui-sans-serif, -apple-system, Segoe UI, Roboto, sans-serif">cleaned up after.</text>
+	<text x="26" y="146" fill="#6f6f7c" font-size="12.5" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">Python   ·   ★ 2</text>
+</svg>
