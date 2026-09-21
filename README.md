@@ -44,12 +44,12 @@
 
 <!-- projects:start -->
 <p align="center">
-	<a href="https://github.com/firekern/zusia"><img src="assets/card-zusia.svg?d=20260920" alt="zusia: A study buddy inside Zotero. Ask Claude Code, Codex or Antigravity about the paper on screen; get LaTeX, drawings and proofs back." width="49%"></a>
-	<a href="https://github.com/firekern/zagreus-italic-challenge-xmoons"><img src="assets/card-zagreus-italic-challenge-xmoons.svg?d=20260920" alt="zagreus-italic-challenge: Post-training of zagreus-0.4B-ita for the mii-llm challenge. ITALIC 28.88 to 39.88, reproducible end to end." width="49%"></a>
+	<a href="https://github.com/firekern/zusia"><img src="assets/card-zusia.svg?d=20260921" alt="zusia: A study buddy inside Zotero. Ask Claude Code, Codex or Antigravity about the paper on screen; get LaTeX, drawings and proofs back." width="49%"></a>
+	<a href="https://github.com/firekern/zagreus-italic-challenge-xmoons"><img src="assets/card-zagreus-italic-challenge-xmoons.svg?d=20260921" alt="zagreus-italic-challenge: Post-training of zagreus-0.4B-ita for the mii-llm challenge. ITALIC 28.88 to 39.88, reproducible end to end." width="49%"></a>
 </p>
 <p align="center">
-	<a href="https://github.com/firekern/parkinson-handwriting-dl"><img src="assets/card-parkinson-handwriting-dl.svg?d=20260920" alt="parkinson-handwriting-dl: Parkinson's detection from PaHaW handwriting. Time-frequency analysis with a structure-preserving colour encoding." width="49%"></a>
-	<a href="https://github.com/firekern/codeforces"><img src="assets/card-codeforces.svg?d=20260920" alt="codeforces: Competitive programming, problem by problem. Solutions kept as written during the contest, not cleaned up after." width="49%"></a>
+	<a href="https://github.com/firekern/parkinson-handwriting-dl"><img src="assets/card-parkinson-handwriting-dl.svg?d=20260921" alt="parkinson-handwriting-dl: Parkinson's detection from PaHaW handwriting. Time-frequency analysis with a structure-preserving colour encoding." width="49%"></a>
+	<a href="https://github.com/firekern/codeforces"><img src="assets/card-codeforces.svg?d=20260921" alt="codeforces: Competitive programming, problem by problem. Solutions kept as written during the contest, not cleaned up after." width="49%"></a>
 </p>
 <!-- projects:end -->
 
